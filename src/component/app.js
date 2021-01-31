@@ -101,7 +101,8 @@ class App extends React.Component {
                     </div>
                 </div>
                 <div className="main-page-content-wrpper">
-                    <div className="main-page-content">         
+                    <div className="main-page-content">   
+                        <div class="main-page-date">Суббота, 30.01.2020</div>        
                         {this.state.content.map(c => this.contentitem(c))}
                     </div>
                 </div>

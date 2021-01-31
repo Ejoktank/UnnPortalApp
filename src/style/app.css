@@ -1,3 +1,9 @@
+:root {
+  --blue: #5f9fe7;
+  --dark-blue: #548dce;
+}
+
+
 .main-page {
   width: 100%;
 }
@@ -15,7 +21,7 @@
 }
 
 .cal-item-today {
-  background:  #5f9fe7;
+  background:  var(--blue);
   color: #f1f1f1;
 }
 
@@ -54,10 +60,39 @@
   width: 100%;
 }
 
+/* -------------------------------------------------------------
+                            Творения Егора
+------------------------------------------------------------- */
+
+.main {
+  background-color: rgb(245, 245, 245);
+  padding: 0;
+}
+
+.main-page-header {
+  padding-top: 5px;
+}
+
+.cal-item {
+  background-color: rgb(253, 253, 253);
+}
+
+.cal-item-today {
+  background-color: var(--blue);
+}
+
+.main-page-date {
+  padding: 15px 10px 10px 15px;
+  font-size: 12px;
+  color: #b8b6b6;
+}
+
 .content-item {
-  margin: 5px 5px 5px 5px;
-  padding: 5px;
-  border-radius: 5px;
+  /* margin: 5px 5px 5px 5px;*/
+  padding: 10px 5px; 
+
+  background: rgb(253, 253, 253);
+  border-bottom: 1px solid #e2e2e2;
 
   overflow: hidden;
   display: flex;
@@ -67,7 +102,22 @@
 }
 
 .content-item-time {
-  padding: 5px;
+  padding: 0 10px 0 5px;
+  border-right: 2px solid #000000;
+}
+
+.content-item:hover .content-item-time {
+  color: var(--dark-blue);
+  border-right: 2px solid var(--dark-blue);
+}
+
+.content-item:active .content-item-time {
+  color: var(--dark-blue);
+  border-right: 2px solid var(--dark-blue);
+}
+
+.content-item:focus .content-item-time {
+  border-right: 2px solid var(--dark-blue);
 }
 
 .content-item-time-up {
@@ -75,7 +125,7 @@
 }
 
 .content-item-data {
-  padding: 5px;
+  padding: 0 5px 0 10px;
 }
 
 .content-item-data-name {
@@ -94,7 +144,40 @@
   font-weight: 300;
 }
 
+@media (min-width:768px) {
 
+  .cal-item {
+    width: 35px;
+  }
 
+  /* Эта хуйня не работает тут, но работает ессли прямо в разметке написать, мб ты шаришь как это исправить */
+  .main-page-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 
+  .main-page-content {
+    width: 738px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
+  /* Прикрути это к первой паре в день */
+  .content-item-first {
+    border-radius: 5px 5px 0 0;
+  }
+
+  /* А это к последней */
+  .content-item-last {
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+@media (min-width:1024px) {
+
+  .cal-item {
+    width: 40px;
+  }
+
+}
