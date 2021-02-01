@@ -64,13 +64,18 @@
                             Творения Егора
 ------------------------------------------------------------- */
 
+.content-hidden {
+  display: none;
+}
+
 .main {
+  min-height: 100vh;
   background-color: rgb(245, 245, 245);
   padding: 0;
 }
 
 .main-page-header {
-  padding-top: 5px;
+  padding: 7px 10px 0;
 }
 
 .cal-item {
@@ -89,7 +94,7 @@
 
 .content-item {
   /* margin: 5px 5px 5px 5px;*/
-  padding: 10px 5px; 
+  padding: 9px 5px; 
 
   background: rgb(253, 253, 253);
   border-bottom: 1px solid #e2e2e2;
@@ -153,14 +158,20 @@
   /* Эта хуйня не работает тут, но работает ессли прямо в разметке написать, мб ты шаришь как это исправить */
   .main-page-content-wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* Блять ясно ты опИсался */
+    /* Я всё поправил, забей на предыдущий коммент */
   }
 
   .main-page-content {
     width: 738px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .main-page-date {
+    font-size: 14px;
   }
 
   /* Прикрути это к первой паре в день */
@@ -172,12 +183,74 @@
   .content-item-last {
     border-radius: 0 0 5px 5px;
   }
+
+  .content-hidden {
+    display: block;
+  }
 }
+
+
+
+/* Предлагаю, чтобы на 10-х айфонах виднелось насписание на неделю, как на айпаде, потому что отсутствие контента смотрится нищенски */
+@media (min-height:812px) {
+  .content-hidden {
+    display: block;
+  }
+}
+/* Да и вообще, подумай, мб всё же на любые устройства будем сразу расписание на неделю выдавать, а не только на планшеты? */
+
+
+
 
 @media (min-width:1024px) {
 
-  .cal-item {
-    width: 40px;
+  .main-page-content {
+    width: 964px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
+  .cal-item {
+    width: 41px;
+  }
+
+  .content-item {
+    font-size: 18px;
+  }
+
+}
+
+@media (min-width:1366px) {
+
+  .cal-item {
+    width: 46px;
+    line-height: 22px;
+  }
+
+  .cal-item-month {
+    font-size: 14px;
+  }
+
+  .cal-item-number {
+    font-size: 18px;
+  }
+
+  .cal-item-week {
+    font-size: 14px;
+  }
+
+}
+
+@media (min-width:1500px) {
+
+  .cal-item {
+    width: 55px;
+    line-height: 22px;
+  }
+
+  .main-page-header-wrapper {
+    display: flex;
+    justify-content: center;
+    /* Ну или на таком разрешении можно добавить ещё дней, чтобы точно не кончилось место */
+  }
 }

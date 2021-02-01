@@ -100,11 +100,32 @@ class App extends React.Component {
                         {this.days.map(d => this.calitem(d))}
                     </div>
                 </div>
-                <div className="main-page-content-wrpper">
+                <div className="main-page-content-wrapper">
                     <div className="main-page-content">   
-                        <div class="main-page-date">Суббота, 30.01.2020</div>        
+                        <div class="main-page-date">Понедельник, 08.02.2020</div>        
                         {this.state.content.map(c => this.contentitem(c))}
                     </div>
+                    <div className="main-page-content content-hidden">   
+                        <div class="main-page-date">Вторник, 09.02.2020</div>        
+                        {this.state.content.map(c => this.contentitem(c))}
+                    </div>
+                    <div className="main-page-content content-hidden">   
+                        <div class="main-page-date">Среда, 09.02.2020</div>        
+                        {this.state.content.map(c => this.contentitem(c))}
+                    </div>
+                    <div className="main-page-content content-hidden">   
+                        <div class="main-page-date">Четверг, 09.02.2020</div>        
+                        {this.state.content.map(c => this.contentitem(c))}
+                    </div>
+                    <div className="main-page-content content-hidden">   
+                        <div class="main-page-date">Пятница, 09.02.2020</div>        
+                        {this.state.content.map(c => this.contentitem(c))}
+                    </div>
+                    <div className="main-page-content content-hidden">   
+                        <div class="main-page-date">Суббота, 09.02.2020</div>        
+                        {this.state.content.map(c => this.contentitem(c))}
+                    </div>
+                    
                 </div>
             </div>
         )
