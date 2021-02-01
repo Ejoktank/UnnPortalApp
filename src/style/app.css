@@ -1,6 +1,11 @@
 :root {
   --blue: #5f9fe7;
   --dark-blue: #548dce;
+  --light-blue: #90bdf0;
+  --green: #a0ffa8;
+  --red: #ffaaaa;
+  --orange: #ffe2a3;
+  --grey: #dadada;
 }
 
 
@@ -82,6 +87,33 @@
   background-color: rgb(253, 253, 253);
 }
 
+.call-item-bg-color {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+}
+
+
+.cal-item-bg-red {
+  background-color: var(--red);
+}
+.cal-item-bg-green {
+  background-color: var(--green);
+}
+.cal-item-bg-orange {
+  background-color: var(--orange);
+}
+.cal-item-bg-blue {
+  background-color: var(--light-blue);
+}
+.cal-item-bg-grey {
+  background-color: var(--grey);
+}
+
+
 .cal-item-today {
   background-color: var(--blue);
 }
@@ -108,7 +140,7 @@
 
 .content-item-time {
   padding: 0 10px 0 5px;
-  border-right: 2px solid #000000;
+  border-right: 2px solid #636363;
 }
 
 .content-item:hover .content-item-time {

@@ -56,9 +56,26 @@ class App extends React.Component {
     calitem(ctx) {
         return (
             <div className={ctx.today ? "cal-item cal-item-today" : "cal-item"} onClick={() => { this.request(ctx.date); }} key={Date.now() + "_" + Math.random()}>
-                <div className="cal-item-month">{ctx.month}</div>
-                <div className="cal-item-number">{ctx.number}</div>
-                <div className="cal-item-week">{ctx.day}</div>
+                <div className="cal-item-content">
+                    <div className="cal-item-month">{ctx.month}</div>
+                    <div className="cal-item-number">{ctx.number}</div>
+                    <div className="cal-item-week">{ctx.day}</div>
+                </div>
+                <div className="call-item-bg">
+                    {/* Экзамены */}
+                    <div className="call-item-bg-color call-item-bg-red"></div> 
+                    {/* Лекции */}
+                    <div className="call-item-bg-color call-item-bg-green"></div>
+                    {/* Лабы */}
+                    <div className="call-item-bg-color call-item-bg-blue"></div>
+                    {/* Практики */}
+                    <div className="call-item-bg-color call-item-bg-orange"></div>
+                    {/* Консультации */}
+                    <div className="call-item-bg-color call-item-bg-grey"></div>
+                    {/* Выходные */}
+                    <div className="call-item-bg-color call-item-bg-white"></div>
+                </div>
+
             </div>
         );
     }
